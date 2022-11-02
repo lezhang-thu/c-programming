@@ -33,7 +33,7 @@ int main(void) {
     /*int nums[] = {5, 7, 7, 8, 8, 10};
     int target = 8;*/
     int nums[] = {5, 7, 7, 8, 8, 10};
-    int target = 6;
+    int target = 7;
 
     printf("%d\n", searchStart(nums, 6, target));
     printf("%d\n", searchEnd(nums, 6, target));
