@@ -2,7 +2,8 @@
 #define STR_LEN 80
 
 void char_pointer(void) {
-    char *ptr;
+    char s[STR_LEN];
+    char *ptr = s;
     printf("Input a string: ");
     gets(ptr);
     printf("%s\n", ptr);
