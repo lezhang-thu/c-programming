@@ -10,7 +10,7 @@ int main() {
     ch = getchar();*/
     /*scanf(" ");
     scanf("%c", &ch);*/
-    //scanf(" %c", &ch);
+    // scanf(" %c", &ch);
     fflush(stdin);
     ch = getchar();
     printf("%c\n", ch);
