@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-/*void f(int a[], int n) {
+void f(int a[], int n) {
     printf("%lu\n", sizeof(a));
-}*/
+}
 
 int main(void) {
     int a[10];
@@ -10,6 +10,6 @@ int main(void) {
     p = a;
 
     printf("%lu %lu\n", sizeof(a), sizeof(p));
-    // f(a, 10);
+    f(a, 10);
     return 0;
 }
