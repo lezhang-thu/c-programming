@@ -10,14 +10,18 @@ struct STU {
 void ord_stu(struct STU a[], int stu_num) {
     // Please fill this blank
     int i, j;
-    for (i = 0; i < stu_num - 1; i++)
-        for (j = i + 1; j < stu_num; j++) {
-            if (a[j].mark > a[i].mark) {
-                struct STU x = a[j];
-                a[j] = a[i];
-                a[i] = x;
-            }
+    int n = stu_num;
+    for (i = 0; i < n - 1; i++) {
+        int k = i;
+        for (j = i + 1; j < n; j++)
+            if (a[j].mark > a[k].mark) k = j;
+        if (k != i) {
+            struct STU t;
+            t = a[i];
+            a[i] = a[k];
+            a[k] = t;
         }
+    }
 }
 void prt_stu(struct STU a[], int stu_num) {
     // Please fill this blank
