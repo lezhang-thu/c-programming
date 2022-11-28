@@ -7,23 +7,21 @@ struct d_array {
 };
 typedef struct d_array DArray;
 
-DArray create(int);
+void create(DArray *, int);
 void grow(DArray *, int);
 void print(DArray *);
 void release(DArray *);
 
-DArray create(int n) {
-    DArray a;
+void create(DArray *p, int n) {
     int i;
-    a.array = (int *)malloc(sizeof(int) * n);
-    if (a.array == NULL) {
+    p->array = (int *)malloc(sizeof(int) * n);
+    if (p->array == NULL) {
         printf("Allocation Error");
         exit(0);
     } else {
-        a.length = n;
-        for (i = 0; i < a.length; i++) scanf("%d", &a.array[i]);
+        p->length = n;
+        for (i = 0; i < p->length; i++) scanf("%d", &p->array[i]);
     }
-    return a;
 }
 
 void grow(DArray *aPtr, int n) {
@@ -54,7 +52,7 @@ int main(void) {
     int n;
     DArray a;
     scanf("%d", &n);
-    a = create(n);
+    create(&a, n);
     print(&a);
     grow(&a, n * 2);
     print(&a);
