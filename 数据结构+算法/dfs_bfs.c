@@ -20,7 +20,7 @@ void BFS(int adj_matrix[][8], int s, bool visited[]) {
     visited[s] = true;
     printf("%c ", (char)(s + 'A'));
     queue[++rear] = s;
-
+    // 有效范围：(front, rear]
     while (front < rear) {
         int v, w;
         v = queue[++front];
@@ -58,10 +58,11 @@ int main(void) {
     return 0;*/
 
     bool visited[8];
-    memset(visited, 0, sizeof(bool) * 8);
+    /*memset(visited, 0, sizeof(bool) * 8);
 
     DFS(adj_matrix, 'E' - 'A', visited);
     printf("\n");
+    return 0;*/
 
     memset(visited, 0, sizeof(bool) * 8);
     BFS(adj_matrix, 'E' - 'A', visited);
