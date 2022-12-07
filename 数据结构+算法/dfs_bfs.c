@@ -15,8 +15,8 @@ void DFS(int adj_matrix[][8], int v, bool visited[]) {
 }
 
 void BFS(int adj_matrix[][8], int s, bool visited[]) {
-    int* queue = (int*)malloc(sizeof(int) * (8 + 1));
-    int front = 0, rear = 0;
+    int* queue = (int*)malloc(sizeof(int) * 8);
+    int front = -1, rear = -1;
     visited[s] = true;
     printf("%c ", (char)(s + 'A'));
     queue[++rear] = s;

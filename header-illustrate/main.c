@@ -3,7 +3,8 @@
 #include "sum.h"
 
 int main(void) {
-    int a = 13, b = 22;
-    printf("%d\n", sumOfTwoNumbersGeZero(a, b));
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d + %d = %d\n", a, b, sumOfTwoNumbersGeZero(a, b));
     return 0;
 }

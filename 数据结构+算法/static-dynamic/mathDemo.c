@@ -1,5 +1,5 @@
 // mathDemo.c
-#include <mymath.h>
+#include "mymath.h"
 #include <stdio.h>
 #include <stdlib.h>
 
