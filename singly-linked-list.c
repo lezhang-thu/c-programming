@@ -2,7 +2,6 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define ERROR -1
 
 struct ListNode {
     int val;
