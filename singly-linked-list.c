@@ -79,7 +79,7 @@ int main(void) {
     for (k = 0; k < 5; k++) create(L, a[4 - k]);
     printOut(L);
 
-    Insert(L, 4, 6);
+    insert(L, 4, 3);
     printOut(L);
     return 0;
 }
